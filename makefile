@@ -1,12 +1,14 @@
 all: main.o
-	gcc -o <program> main.o
+	gcc -o randgen main.o
 
-main.o: main.c headers.h
+main.o: main.c
 	gcc -c main.c
 
 run:
-	./<program>
+	./randgen
 
 clean:
+	touch a.o
+	touch a.swp
 	rm *.o
 	rm *.swp
